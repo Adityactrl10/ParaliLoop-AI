@@ -309,6 +309,38 @@ header[data-testid="stHeader"] button:hover {
     background-color: #E0E8DE !important;
 }
 
+/* Improve visibility of all Streamlit header controls */
+header[data-testid="stHeader"] {
+    background-color: #F5F7F2 !important;
+    color: #103D2B !important;
+    opacity: 1 !important;
+}
+
+header[data-testid="stHeader"] button,
+header[data-testid="stHeader"] a,
+header[data-testid="stHeader"] svg {
+    color: #103D2B !important;
+    opacity: 1 !important;
+}
+
+header[data-testid="stHeader"] button svg,
+header[data-testid="stHeader"] a svg {
+    fill: #103D2B !important;
+    stroke: #103D2B !important;
+    opacity: 1 !important;
+}
+
+/* Streamlit top-left menu/control */
+button[data-testid="stBaseButton-header"],
+[data-testid="stHeader"] [data-testid="stToolbar"] {
+    color: #103D2B !important;
+    opacity: 1 !important;
+}
+
+header[data-testid="stHeader"] button:hover {
+    background-color: #E0E8DE !important;
+}
+
 
 </style>
 """, unsafe_allow_html=True)
