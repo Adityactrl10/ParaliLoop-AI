@@ -230,6 +230,66 @@ header[data-testid="stHeader"] {
 [data-testid="stToolbar"] {
     background: transparent !important;
 }
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+
+    .block-container {
+        padding: 1rem 1rem 2rem !important;
+    }
+
+    .hero {
+        padding: 24px 20px !important;
+        border-radius: 16px !important;
+    }
+
+    .hero-title {
+        font-size: 27px !important;
+        line-height: 1.35 !important;
+    }
+
+    .hero-description {
+        font-size: 14px !important;
+    }
+
+    .kpi-card {
+        padding: 17px 14px !important;
+        min-height: 125px !important;
+    }
+
+    .kpi-value {
+        font-size: 22px !important;
+        white-space: normal !important;
+    }
+
+    .panel {
+        padding: 18px !important;
+    }
+
+    /* Improve suggested question buttons */
+    div.stButton > button {
+        min-height: 55px !important;
+        white-space: normal !important;
+        font-size: 13px !important;
+        padding: 10px !important;
+    }
+
+    /* Improve sidebar branding visibility */
+    section[data-testid="stSidebar"] {
+        min-width: 250px;
+    }
+
+    section[data-testid="stSidebar"] > div {
+        padding-top: 1rem;
+    }
+
+    /* Prevent charts from overflowing */
+    div[data-testid="stPlotlyChart"] {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+}
+
 </style>
 """, unsafe_allow_html=True)
 
