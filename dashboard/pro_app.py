@@ -341,6 +341,22 @@ header[data-testid="stHeader"] button:hover {
     background-color: #E0E8DE !important;
 }
 
+/* Force Streamlit header icons to dark green */
+header[data-testid="stHeader"] svg,
+header[data-testid="stHeader"] button svg,
+[data-testid="stToolbar"] svg,
+[data-testid="stHeaderActionElements"] svg {
+    filter: brightness(0) saturate(100%) !important;
+    opacity: 1 !important;
+}
+
+/* Keep header controls visible */
+header[data-testid="stHeader"] button,
+[data-testid="stToolbar"] button {
+    opacity: 1 !important;
+    color: #103D2B !important;
+}
+
 
 </style>
 """, unsafe_allow_html=True)
