@@ -2,14 +2,26 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import streamlit as st
 from google import genai
 from google.genai import types
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
 
-API_KEY = os.getenv("GEMINI_API_KEY")
-MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+# Read credentials from local .env or Streamlit Cloud Secrets
+try:
+    API_KEY = (
+        os.getenv("GEMINI_API_KEY")
+        or st.secrets.get("GEMINI_API_KEY", "")
+    )
+    MODEL_NAME = (
+        os.getenv("GEMINI_MODEL")
+        or st.secrets.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
+    )
+except Exception:
+    API_KEY = os.getenv("GEMINI_API_KEY", "")
+    MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 
 SYSTEM_INSTRUCTION = """
 You are ParaliLoop AI, an intelligent agricultural assistant
@@ -38,7 +50,7 @@ RULES:
 def get_gemini_client():
     if not API_KEY:
         raise ValueError(
-            "Gemini API key missing. Check your root .env file."
+            "Gemini API key missing. Check Streamlit Secrets or root .env file."
         )
     return genai.Client(api_key=API_KEY)
 
