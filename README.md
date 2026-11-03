@@ -166,3 +166,12 @@ ParaliLoop AI is an academic and sustainability-focused project. It is not a gov
 ---
 
 **ParaliLoop AI – Turning Satellite Intelligence into Sustainable Agricultural Action.** 🌍
+---
+
+## 🚀 Installation & Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Adityactrl10/ParaliLoop-AI.git
+cd ParaliLoop-AI
