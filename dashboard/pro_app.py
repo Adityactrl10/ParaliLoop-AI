@@ -290,6 +290,26 @@ header[data-testid="stHeader"] {
     }
 }
 
+/* Make Streamlit header icons visible */
+header[data-testid="stHeader"] {
+    background-color: #F5F7F2 !important;
+}
+
+header[data-testid="stHeader"] button {
+    color: #103D2B !important;
+}
+
+header[data-testid="stHeader"] button svg {
+    color: #103D2B !important;
+    fill: #103D2B !important;
+    stroke: #103D2B !important;
+}
+
+header[data-testid="stHeader"] button:hover {
+    background-color: #E0E8DE !important;
+}
+
+
 </style>
 """, unsafe_allow_html=True)
 
