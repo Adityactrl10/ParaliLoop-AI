@@ -357,6 +357,30 @@ header[data-testid="stHeader"] button,
     color: #103D2B !important;
 }
 
+/* Make the sidebar toggle clearly visible */
+header button[aria-label*="sidebar" i],
+header button[title*="sidebar" i],
+button[data-testid="stSidebarCollapsedControl"],
+[data-testid="stSidebarCollapsedControl"] button {
+    background-color: #DCEADF !important;
+    color: #103D2B !important;
+    opacity: 1 !important;
+    border: 1px solid #A8C5AE !important;
+    border-radius: 8px !important;
+}
+
+/* Make the chevron dark green */
+header button[aria-label*="sidebar" i] svg,
+header button[title*="sidebar" i] svg,
+button[data-testid="stSidebarCollapsedControl"] svg,
+[data-testid="stSidebarCollapsedControl"] svg {
+    color: #103D2B !important;
+    fill: #103D2B !important;
+    stroke: #103D2B !important;
+    opacity: 1 !important;
+    filter: brightness(0) saturate(100%) !important;
+}
+
 
 </style>
 """, unsafe_allow_html=True)
